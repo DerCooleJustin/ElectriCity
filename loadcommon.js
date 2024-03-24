@@ -1,18 +1,7 @@
-if(!["/", "/index.html", ""].includes(location.pathname)){
-    if(!(location.pathname.includes("T:/") || location.pathname.includes("C:/"))) {
-        headerlink = "./../header.html";
-        footerlink = "./../footer.html";
-        stylelink = "./../style.css";
-    } else {
-        headerlink = "./header.html";
-        footerlink = "./footer.html";
-        stylelink = "./style.css";
-    }
-} else {
-    headerlink = "/header.html";
-    footerlink = "/footer.html";
-    stylelink = "/style.css";
-}
+headerLink = "https://dercoolejustin.github.io/ElectriCity/header.html";
+footerLink = "https://dercoolejustin.github.io/ElectriCity/footer.html";
+styleLink = "https://dercoolejustin.github.io/ElectriCity/style.css";
+
 fetch(headerlink, {mode: "no-cors"})
   .then(response => response.text())
   .then(data => {
