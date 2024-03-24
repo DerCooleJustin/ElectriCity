@@ -1,6 +1,6 @@
-headerLink = "https://dercoolejustin.github.io/ElectriCity/header.html";
-footerLink = "https://dercoolejustin.github.io/ElectriCity/footer.html";
-styleLink = "https://dercoolejustin.github.io/ElectriCity/style.css";
+headerlink = "https://dercoolejustin.github.io/ElectriCity/header.html";
+footerlink = "https://dercoolejustin.github.io/ElectriCity/footer.html";
+stylelink = "https://dercoolejustin.github.io/ElectriCity/style.css";
 
 fetch(headerlink, {mode: "no-cors"})
   .then(response => response.text())
