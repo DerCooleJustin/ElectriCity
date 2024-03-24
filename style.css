@@ -24,6 +24,7 @@ body {
         align-self: left;
         margin: 0;
         margin-left: 1%;
+        img{width: 70%;}
     }
     a{
         color: white;
