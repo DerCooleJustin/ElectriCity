@@ -80,6 +80,28 @@ body {
     }
 }
 
+.produktauswahl{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    margin-top: 10%;
+    p{
+        margin-top: 5px;
+    }
+    a{
+        margin: auto;
+        img.keyboard{
+            max-width: 350px;
+        }
+    }
+    img:hover{
+        background-color: rgba(139, 198, 233, 0.39);
+        border-color: rgba(33, 124, 124, 0.5);
+        border-radius: 1px;
+        border-style: solid;
+    }
+}
+
 .footer{
     background-color: #333;
     color: #fff;
