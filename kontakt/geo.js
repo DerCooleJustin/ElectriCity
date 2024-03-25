@@ -22,7 +22,7 @@ function showUserPos() {
 
     window.setTimeout(function(){
         var element = document.getElementById('osm-map');
-        element.style = 'height:300px;';
+        element.style = 'height:300px; width:400px;';
         var map = L.map(element);
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
             attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -30,6 +30,6 @@ function showUserPos() {
         var target = L.latLng(attitude, longitude);
         map.setView(target, 14);
         L.marker(target).addTo(map);
-    }, 100);
+    }, 500);
 
 }
