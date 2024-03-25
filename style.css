@@ -114,3 +114,8 @@ body {
     }
     flex-wrap: wrap;
 }
+
+#osm-map{
+    width: 400px;
+    height: 300px;
+}
