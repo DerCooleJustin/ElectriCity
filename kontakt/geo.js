@@ -30,6 +30,6 @@ function showUserPos() {
         var target = L.latLng(attitude, longitude);
         map.setView(target, 14);
         L.marker(target).addTo(map);
-    }, 1);
+    }, 100);
 
 }
