@@ -5,36 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ElectriCity | Kontakt</title>
         <script type="text/javascript" src="/ElectriCity/loadcommon.js"></script>
+        <script type="text/javascript" src="/ElectriCity/kontakt/geo.js"></script>
     </head>
     <body>
         <div class="content">
             <div class="katergorieauswahl">
                 <p>Hier sind wir:</p>
-                <div class="mapouter">
-                    <div class="gmap_canvas">
-                        <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Lückstraße 60-63, 10317 Berlin&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-                        <a href="https://embed-googlemap.com">embed google map</a>
-                    </div>
-                    <style>
-                        .mapouter{
-                            position:relative;
-                            text-align:right;
-                            width:30%;
-                            height:400px;
-                        }
-                        
-                        .gmap_canvas {
-                            overflow:hidden;
-                            background:none;
-                            width:100%;
-                            height:400px;
-                        }
-                        
-                        .gmap_iframe{
-                            height:400px;
-                        }
-                    </style>
-                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4857.471164392692!2d13.48698421261589!3d52.502025837443064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ee81e4cfe8b%3A0xa0b2ac9a909b6d1d!2sImmanuel-Kant-Gymnasium!5e0!3m2!1sde!2sde!4v1711368006187!5m2!1sde!2sde"
+                    width="400" height="300"
+                    style="border:0;"
+                    allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div>
                 <p>Du bist hier:</p>
@@ -43,22 +25,3 @@
         </div>
     </body>
 </html>
-
-<!-- Where you want to render the map
-<div id="osm-map"></div>
-
-Create Leaflet map on map element
-<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-<link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
-<script>
-    var element = document.getElementById('osm-map');
-    element.style = 'height:300px;';
-    var map = L.map(element);
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-    var target = L.latLng('YOUR_LATITUDE', 'YOUR_LONGITUDE');
-    map.setView(target, 14);
-    L.marker(target).addTo(map);
-</script>
--->

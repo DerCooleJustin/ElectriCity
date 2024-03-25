@@ -1,8 +1,9 @@
 headerlink = "https://dercoolejustin.github.io/ElectriCity/header.html";
 footerlink = "https://dercoolejustin.github.io/ElectriCity/footer.html";
 stylelink = "https://dercoolejustin.github.io/ElectriCity/style.css";
+faviconlink = "https://dercoolejustin.github.io/ElectriCity/images/favicon.ico";
 
-fetch(headerlink, {mode: "no-cors"})
+fetch(headerlink)
   .then(response => response.text())
   .then(data => {
     const newContent = document.createElement('div');
@@ -12,7 +13,7 @@ fetch(headerlink, {mode: "no-cors"})
   })
   .catch(error => console.error('An error occurred:', error));
 
-fetch(footerlink, {mode: "no-cors"})
+fetch(footerlink)
   .then(response => response.text())
   .then(data => {
     const newContent = document.createElement('div');
@@ -22,8 +23,14 @@ fetch(footerlink, {mode: "no-cors"})
   })
   .catch(error => console.error('An error occurred:', error));
 
-fetch(stylelink, {mode: "no-cors"}).then(response => response.text()).then(data => {
+fetch(stylelink).then(response => response.text()).then(data => {
     const newContent = document.createElement("style")
     newContent.innerHTML = data;
     document.head.appendChild(newContent);
 }).catch(error => console.error("An error occured:", error));
+
+const favicon = document.createElement("link");
+favicon.rel = "icon";
+favicon.href = faviconlink;
+favicon.type = "image/vnd.microsoft.icon";
+document.head.appendChild(favicon);
