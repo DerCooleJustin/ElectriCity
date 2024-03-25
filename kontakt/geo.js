@@ -3,8 +3,8 @@ function showUserPos() {
     attitude = 0;
     navigator.geolocation.getCurrentPosition(
         function(pos){
-            this.longitude = pos.longitude;
-            this.attitude = pos.attitude;
+            this.longitude = pos.coords.longitude;
+            this.attitude = pos.coords.attitude;
         }
     ), function(err){
         alert(`An error occoured: Could not retrieve location\n(${err.code}) ${err.message}`);
