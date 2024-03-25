@@ -20,7 +20,7 @@
             </div>
             <div>
                 <p>Du bist hier:</p>
-                <button onclick="navigator.geolocation.getCurrentPosition(function(pos){alert(`Position:\nLatitude: ${pos.coords.latitude}\nLongitude: ${pos.coords.longitude}\nMore or less ${pos.coords.accuracy} meters.`)}, function(err){alert(`Error ${err.code}: ${err.message}`)}, {enableHighAccuracy: true, timeout: 5000, maximumAge: 0});">Standort anzeigen</button>
+                <button onclick="showUserPos();">Standort anzeigen</button>
             </div>
         </div>
     </body>
