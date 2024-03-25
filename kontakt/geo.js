@@ -20,13 +20,16 @@ function showUserPos() {
     css.href = "https://unpkg.com/leaflet@1.6.0/dist/leaflet.css";
     document.head.appendChild(css);
 
-    var element = document.getElementById('osm-map');
-    element.style = 'height:300px;';
-    var map = L.map(element);
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-    var target = L.latLng(attitude, longitude);
-    map.setView(target, 14);
-    L.marker(target).addTo(map);
+    window.setTimeout(function(){
+        var element = document.getElementById('osm-map');
+        element.style = 'height:300px;';
+        var map = L.map(element);
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        var target = L.latLng(attitude, longitude);
+        map.setView(target, 14);
+        L.marker(target).addTo(map);
+    }, 1);
+
 }
