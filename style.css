@@ -117,4 +117,6 @@ body {
 
 #map{
     height: 300px;
+    width: 50%;
+    max-width: 500px;
 }
