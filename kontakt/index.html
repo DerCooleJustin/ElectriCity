@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ElectriCity | Kontakt</title>
+        <script type="text/javascript" src="/ElectriCity/loadcommon.js"></script>
+    </head>
+    <body>
+        <div class="content">
+            <div>
+                <p>Hier sind wir:</p>
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Lückstraße 60-63, 10317 Berlin&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                        <a href="https://embed-googlemap.com">embed google map</a>
+                    </div>
+                    <style>
+                        .mapouter{
+                            position:relative;
+                            text-align:right;
+                            width:100%;
+                            height:400px;
+                        }
+                        
+                        .gmap_canvas {
+                            overflow:hidden;
+                            background:none;
+                            width:100%;
+                            height:400px;
+                        }
+                        
+                        .gmap_iframe{
+                            height:400px;
+                        }
+                    </style>
+                </div>
+            </div>
+            <div>
+                <p>Du bist hier:</p>
+                <button onclick="navigator.geolocation.getCurrentPosition(function(pos){alert(`Position:\nLatitude: ${pos.coords.latitude}\nLongitude: ${pos.coords.longitude}\nMore or less ${pos.coords.accuracy} meters.`)}, function(err){alert(`Error ${err.code}: ${err.message}`)}, {enableHighAccuracy: true, timeout: 5000, maximumAge: 0});">Standort anzeigen</button>
+            </div>
+        </div>
+    </body>
+</html>
+
+<!-- Where you want to render the map
+<div id="osm-map"></div>
+
+Create Leaflet map on map element
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+<link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
+<script>
+    var element = document.getElementById('osm-map');
+    element.style = 'height:300px;';
+    var map = L.map(element);
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    var target = L.latLng('YOUR_LATITUDE', 'YOUR_LONGITUDE');
+    map.setView(target, 14);
+    L.marker(target).addTo(map);
+</script>
+-->
