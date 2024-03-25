@@ -115,7 +115,6 @@ body {
     flex-wrap: wrap;
 }
 
-#osm-map{
-    max-width: 400px;
-    max-height: 300px;
+#map{
+    height: 300px;
 }
