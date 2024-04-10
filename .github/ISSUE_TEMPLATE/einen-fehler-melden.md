@@ -1,7 +1,7 @@
 ---
 name: Einen Fehler melden
 about: Wenn du mir Fehler sendest, hilfst du mir, ElectriCity zu verbessern
-title: "[BUG] Title here"
+title: "[BUG] "
 labels: bug
 assignees: DerCooleJustin
 
@@ -11,7 +11,7 @@ assignees: DerCooleJustin
 Erkläre hier bitte genau den Fehler.
 
 **Erzeugung**
-Hast du es nochmal geschafft, den Fehler hervorzurufen? Wenn ja, wie?:
+Hast du es nochmal geschafft, den Fehler hervorzurufen? Wenn ja, wie?
 1. Schritt 1 hier
 2. Schritt 2 hier....
 
