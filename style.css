@@ -117,6 +117,7 @@ body {
 
 #map{
     height: 300px;
-    width: 50%;
-    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
