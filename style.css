@@ -126,20 +126,20 @@ body {
 .usericon {
     margin-right: 2.5%;
     /* Other styles for the user icon */
+}
 
-    img {
-        width: 50%;
-        height: auto;
-        /* Additional image styles if needed */
-    }
+.usericon img {
+    width: 50%;
+    height: auto;
+    /* Additional image styles if needed */
+}
 
-    .menu {
-        display: none;
-        /* Other menu styles (e.g., background color, padding, etc.) */
-    }
+.menu {
+    display: none;
+    /* Other menu styles (e.g., background color, padding, etc.) */
+}
 
-    .usericon:hover .menu {
-        display: block;
-        /* Styles for the menu when the user icon is hovered */
-    }
+.usericon:hover .menu {
+    display: block;
+    /* Styles for the menu when the user icon is hovered */
 }
