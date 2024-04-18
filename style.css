@@ -128,11 +128,6 @@ body {
     /* Other styles for the user icon */
 }
 
-.usericon img {
-    width: 50%;
-    height: auto;
-    /* Additional image styles if needed */
-}
 
 .menu {
     display: none;
@@ -141,9 +136,5 @@ body {
 
 .usericon:hover .menu {
     display: block;
-    img {
-        width: 50%;
-        height: auto;
-    }
 }
  
