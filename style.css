@@ -122,3 +122,9 @@ body {
     margin-left: 5%;
     margin-right: 5%;
 }
+
+.usericon{
+    img{
+        margin-right: 5%;
+    }
+}
