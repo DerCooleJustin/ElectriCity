@@ -124,5 +124,9 @@ body {
 }
 
 .usericon{
-    margin-right: 5%;
+    margin-right: 2.5%;
+    img{
+        width: 50%;
+        height: auto;
+    }
 }
