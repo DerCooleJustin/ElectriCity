@@ -129,4 +129,10 @@ body {
         width: 50%;
         height: auto;
     }
+    img:hover + .menu{
+        display: block;
+    }
+    .menu{
+        display: hidden;
+    }
 }
