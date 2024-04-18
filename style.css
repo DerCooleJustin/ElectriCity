@@ -7,12 +7,13 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    -ms-flex-direction: column;
     min-height: 100vh;
     max-width: 100vw;
 }
 
 .header{
-    background-color: #333;
+    background-color: rgb(51, 51, 51);
     padding: 10px;
     color: #fff;
     position: fixed;
