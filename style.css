@@ -141,6 +141,9 @@ body {
 
 .usericon:hover .menu {
     display: block;
-    /* Styles for the menu when the user icon is hovered */
+    img {
+        width: 50%;
+        height: auto;
+    }
 }
  
