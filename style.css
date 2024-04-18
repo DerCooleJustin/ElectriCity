@@ -130,9 +130,9 @@ body {
         height: auto;
     }
     .menu{
-        display: hidden;
+        display: none;
     }
-    img:hover + .menu{
+    img:hover > .menu{
         display: block;
     }
 }
