@@ -132,7 +132,7 @@ body {
     .menu{
         display: none;
     }
-    img:hover > .menu{
+    .usericon:hover .menu{
         display: block;
     }
 }
