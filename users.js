@@ -17,6 +17,8 @@ function register(){
     location.href = location.href;
 }
 
+while(document.getElementsByClassName("username").length==0);
+
 username = localStorage.getItem("username");
 password = localStorage.getItem("password");
 timeout = localStorage.getItem("timeout");
