@@ -143,4 +143,8 @@ body {
 .usericon:hover .menu {
     display: block;
 }
- 
+
+.usertext{
+    min-width: 190px;
+    align-content: center;
+}
