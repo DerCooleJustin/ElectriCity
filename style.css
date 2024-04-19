@@ -22,14 +22,11 @@ body {
     z-index: 1000;
     display: flex;
     .logo{
+        display: flex;
         align-self: left;
         margin: 0;
         margin-left: 1%;
         img{width: 70%;}
-        p{
-            min-width: 190px;
-            align-content: center;
-        }
     }
     a{
         color: white;
@@ -133,6 +130,7 @@ body {
 
 .usericon {
     margin-right: 2.5%;
+    align-content: center;
 }
 
 
@@ -142,9 +140,4 @@ body {
 
 .usericon:hover .menu {
     display: block;
-}
-
-.usertext{
-    min-width: 190px;
-    align-content: center;
 }
