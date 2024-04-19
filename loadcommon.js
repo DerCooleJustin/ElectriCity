@@ -30,13 +30,13 @@ fetch(stylelink).then(response => response.text()).then(data => {
     document.head.appendChild(newContent);
 }).catch(error => console.error("An error occured:", error));
 
-const userScript = document.createElement("script");
-userScript.type = "text/javascript";
-userScript.src = usersLink;
-document.head.appendChild(userScript);
-
 const favicon = document.createElement("link");
 favicon.rel = "icon";
 favicon.href = faviconlink;
 favicon.type = "image/vnd.microsoft.icon";
 document.head.appendChild(favicon);
+
+const userScript = document.createElement("script");
+userScript.type = "text/javascript";
+userScript.src = usersLink;
+document.head.appendChild(userScript);
