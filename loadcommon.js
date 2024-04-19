@@ -30,11 +30,10 @@ fetch(stylelink).then(response => response.text()).then(data => {
     document.head.appendChild(newContent);
 }).catch(error => console.error("An error occured:", error));
 
-fetch(usersLink).then(response => response.text()).then(data => {
-    const newContent = document.createElement("script");
-    newContent.type = "text/javascript";
-    document.head.appendChild(newContent);
-}).catch(error => console.error("An error occoured:", error));
+const userScript = document.createElement("script");
+userScript.type = "text/javascript";
+userScript.src = usersLink;
+document.head.appendChild(userScript);
 
 const favicon = document.createElement("link");
 favicon.rel = "icon";
