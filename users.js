@@ -17,6 +17,8 @@ function register(){
     location.href = location.href;
 }
 
+
+
 while(document.getElementsByClassName("usericon").length==0);
 
 username = localStorage.getItem("username");
@@ -52,12 +54,12 @@ if (username == null){
     document.getElementsByClassName()[0].innerHTML = "anmelden";
 } else {
     if (timeout < Math.floor(Date.now() / 1000)){
-        //Prompt user to log in
-        //Code for 15 Minutes timeout:  Math.floor(Date.now() / 1000) + (15*60)  Adds 15 Minutes to current unix time
         input = prompt(`Willkommen zurück! Bitte gib dein Passwort ein oder schreibe "vergessen", um es zurück zu setzen:`);
         if (input.hashCode() == password) {
             //Change text on class "username" to username and change login button to log out
             document.getElementsByClassName("username")[0].innerHTML = username;
+            localStorage.setItem("timeout", Math.floor(Date.now() / 1000) + (15*60));
+            
         } else {
             if (input == "vergessen") {
                 input = prompt("Um dein Passwort zurückzusetzen, gib bitte deinen Nutzernamen ein:");
@@ -75,6 +77,6 @@ if (username == null){
             }
         }
     } else {
-        localStorage.setItem("timeout", Math.floor(Date.now() / 1000) + (15*60))
+        localStorage.setItem("timeout", Math.floor(Date.now() / 1000) + (15*60));
     }
 }

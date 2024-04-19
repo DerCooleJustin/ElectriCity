@@ -34,7 +34,6 @@ body {
         margin-right: 5%;
     }
     p{
-        min-width: max-content;
         align-content: center;
     }
 }
