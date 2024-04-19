@@ -140,3 +140,7 @@ body {
 .usericon:hover .menu {
     display: block;
 }
+
+button.logout, button.timeout{
+    display: none;
+}

@@ -17,6 +17,15 @@ function register(){
     location.href = location.href;
 }
 
+function timeout(){
+    localStorage.setItem("timeout", Math.floor(Date.now() / 1000));
+    location.href = location.href;
+}
+
+function logout(){
+    localStorage.setItem("username", "NOT_LOGGED_IN__EC");
+    location.href = location.href;
+}
 
 
 while(document.getElementsByClassName("usericon").length==0);
@@ -56,10 +65,12 @@ if (username == null){
     if (timeout < Math.floor(Date.now() / 1000)){
         input = prompt(`Willkommen zurück! Bitte gib dein Passwort ein oder schreibe "vergessen", um es zurück zu setzen:`);
         if (input.hashCode() == password) {
-            //Change text on class "username" to username and change login button to log out
+            //Change login button to log out
             document.getElementsByClassName("username")[0].innerHTML = username;
+            document.getElementsByClassName("register")[0].style = "display: none;";
+            document.getElementsByClassName("logout")[0].style = "display: block;";
+            document.getElementsByClassName("timeout")[0].style = "display: block;";
             localStorage.setItem("timeout", Math.floor(Date.now() / 1000) + (15*60));
-            
         } else {
             if (input == "vergessen") {
                 input = prompt("Um dein Passwort zurückzusetzen, gib bitte deinen Nutzernamen ein:");
