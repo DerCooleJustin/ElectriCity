@@ -1,23 +1,21 @@
 String.prototype.hashCode = function() {
-        var hash = 0,
-        i, chr;
-        if (this.length === 0) return hash;
-        for (i = 0; i < this.length; i++) {
-            chr = this.charCodeAt(i);
-            hash = ((hash << 5) - hash) + chr;
-            hash |= 0; // Convert to 32bit integer
-        }
-        return hash;
+    var hash = 0,
+    i, chr;
+    if (this.length === 0) return hash;
+    for (i = 0; i < this.length; i++) {
+        chr = this.charCodeAt(i);
+        hash = ((hash << 5) - hash) + chr;
+        hash |= 0; // Convert to 32bit integer
     }
+    return hash;
+}
 
-    function register(){
-        username = prompt("Wie lautet dein Nutzername?");
-        localStorage.setItem("username", username);
-        localStorage.setItem("password", prompt(`Willkommen, ${username}! Wie lautet dein Passwort?`).hashCode());
-        location.href = location.href;
-    }
-
-
+function register(){
+    username = prompt("Wie lautet dein Nutzername?");
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", prompt(`Willkommen, ${username}! Wie lautet dein Passwort?`).hashCode());
+    location.href = location.href;
+}
 
 headerlink = "https://dercoolejustin.github.io/ElectriCity/header.html";
 footerlink = "https://dercoolejustin.github.io/ElectriCity/footer.html";
@@ -94,7 +92,7 @@ username = localStorage.getItem("username");
             input = prompt(`Willkommen zurück! Bitte gib dein Passwort ein oder schreibe "vergessen", um es zurück zu setzen:`);
             if (input.hashCode() == password) {
                 //Change text on class "username" to username and change login button to log out
-                Document.getElementsByClassName("username")[0].innerHTML = username;
+                document.getElementsByClassName("username")[0].innerHTML = username;
 
             } else {
                 if (input == "vergessen") {

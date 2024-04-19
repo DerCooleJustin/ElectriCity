@@ -26,6 +26,10 @@ body {
         margin: 0;
         margin-left: 1%;
         img{width: 70%;}
+        p{
+            min-width: 190px;
+            align-content: center;
+        }
     }
     a{
         color: white;
@@ -125,13 +129,11 @@ body {
 
 .usericon {
     margin-right: 2.5%;
-    /* Other styles for the user icon */
 }
 
 
 .menu {
     display: none;
-    /* Other menu styles (e.g., background color, padding, etc.) */
 }
 
 .usericon:hover .menu {
