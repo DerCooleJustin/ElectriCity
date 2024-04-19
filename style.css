@@ -36,6 +36,10 @@ body {
         margin: auto;
         margin-right: 5%;
     }
+    p{
+        min-width: 190px;
+        align-content: center;
+    }
 }
 
 .content {
