@@ -58,7 +58,7 @@ function login(){
         localStorage.setItem("username", "NOT_LOGGED_IN__EC");
         username = "NOT_LOGGED_IN__EC"
     } else if (username == "NOT_LOGGED_IN__EC") {
-        document.getElementsByClassName()[0].innerHTML = "anmelden";
+        document.getElementsByClassName("username")[0].innerHTML = "anmelden";
     } else {
         if (timeout < Math.floor(Date.now() / 1000)){
             input = prompt(`Willkommen zurück! Bitte gib dein Passwort ein oder schreibe "vergessen", um es zurück zu setzen:`);
