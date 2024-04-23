@@ -90,6 +90,10 @@ function login(){
             }
         } else {
             localStorage.setItem("timeout", Math.floor(Date.now() / 1000) + (15*60));
+            document.getElementsByClassName("username")[0].innerHTML = username;
+            document.getElementsByClassName("register")[0].style = "display: none;";
+            document.getElementsByClassName("logout")[0].style = "display: block;";
+            document.getElementsByClassName("timeout")[0].style = "display: block;";
         }
     }
 }
