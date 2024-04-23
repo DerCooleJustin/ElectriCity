@@ -39,3 +39,5 @@ const userScript = document.createElement("script");
 userScript.type = "text/javascript";
 userScript.src = usersLink;
 document.head.appendChild(userScript);
+
+intervalID = setInterval(login, 10);
