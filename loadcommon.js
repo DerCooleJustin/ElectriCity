@@ -24,11 +24,10 @@ fetch(footerlink)
   })
   .catch(error => console.error('An error occurred:', error));
 
-fetch(stylelink).then(response => response.text()).then(data => {
-    const newContent = document.createElement("style")
-    newContent.innerHTML = data;
-    document.head.appendChild(newContent);
-}).catch(error => console.error("An error occured:", error));
+const style = document.createElement("link");
+style.rel = "stylesheet";
+style.href = stylelink;
+document.head.appendChild(style)
 
 const favicon = document.createElement("link");
 favicon.rel = "icon";
