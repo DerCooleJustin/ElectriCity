@@ -27,7 +27,7 @@ fetch(footerlink)
 const style = document.createElement("link");
 style.rel = "stylesheet";
 style.href = stylelink;
-document.head.appendChild(style)
+document.head.appendChild(style);
 
 const favicon = document.createElement("link");
 favicon.rel = "icon";
