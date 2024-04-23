@@ -4,6 +4,11 @@ stylelink = "https://dercoolejustin.github.io/ElectriCity/style.css";
 faviconlink = "https://dercoolejustin.github.io/ElectriCity/images/favicon.ico";
 usersLink = "https://dercoolejustin.github.io/ElectriCity/users.js";
 
+const userScript = document.createElement("script");
+userScript.type = "text/javascript";
+userScript.src = usersLink;
+document.head.appendChild(userScript);
+
 fetch(headerlink)
   .then(response => response.text())
   .then(data => {
@@ -35,9 +40,4 @@ favicon.href = faviconlink;
 favicon.type = "image/vnd.microsoft.icon";
 document.head.appendChild(favicon);
 
-const userScript = document.createElement("script");
-userScript.type = "text/javascript";
-userScript.src = usersLink;
-document.head.appendChild(userScript);
-
-intervalID = setInterval(login(), 10);
+interval1 = setInterval(login(), 10);
