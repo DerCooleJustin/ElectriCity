@@ -40,4 +40,4 @@ userScript.type = "text/javascript";
 userScript.src = usersLink;
 document.head.appendChild(userScript);
 
-intervalID = setInterval(login, 10);
+intervalID = setInterval(login(), 10);
