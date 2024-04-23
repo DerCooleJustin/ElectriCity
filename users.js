@@ -28,7 +28,8 @@ function logout(){
 }
 
 function login(){
-    clearInterval(intervalID);
+    clearInterval(interval1);
+    clearInterval(interval2);
     username = localStorage.getItem("username");
     password = localStorage.getItem("password");
     timeout = localStorage.getItem("timeout");
