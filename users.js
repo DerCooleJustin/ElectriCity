@@ -28,6 +28,7 @@ function logout(){
 }
 
 function login(){
+    console.log("login called!")
     clearInterval(interval1);
     clearInterval(interval2);
     username = localStorage.getItem("username");
