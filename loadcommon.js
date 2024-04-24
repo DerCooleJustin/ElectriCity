@@ -42,6 +42,6 @@ document.head.appendChild(favicon);
 
 interval1 = setInterval(function(){
   setTimeout(function() {
-    interval2 = setInterval(login, 10);
+    interval2 = setInterval(login(), 10);
   }, 100);
 });

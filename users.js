@@ -18,7 +18,7 @@ function register(){
 }
 
 function timeout(){
-    localStorage.setItem("timeout", Math.floor(Date.now() / 1000));
+    localStorage.setItem("timeout", 0);
     location.href = location.href;
 }
 
@@ -30,12 +30,20 @@ function logout(){
 function login(){
     console.log("login called!")
     clearInterval(interval1);
-    clearInterval(interval2);
-    username = localStorage.getItem("username");
-    password = localStorage.getItem("password");
-    timeout = localStorage.getItem("timeout");
-    triesLeft = localStorage.getItem("triesLeft");
-    lockedTime = localStorage.getItem("lockedTime");
+    var username = localStorage.getItem("username");
+    var password = localStorage.getItem("password");
+    var timeout = localStorage.getItem("timeout");
+    var triesLeft = localStorage.getItem("triesLeft");
+    var lockedTime = localStorage.getItem("lockedTime");
+    var message = "Willkommen! Wir haben bemerkt, dass du diese Seite zum ersten Mal besuchst.\n\
+        Du kannst dich über das Benutzermenü registrieren. Dieses öffnest du, indem du rechts über dein Benutzerbild fährst.\
+        (An Touchscreen nutzer: Du kannst auch tippen.)\n\
+        Du siehst diese Nachricht nur einmal.\n\n\
+        PS: Diese Seite benutzt den LocalStorage. Er ist quasi ein Cookie, also eine Datei, die auf deinem gerät gespeichert wird,\
+        aber ist einfacher für mich zu nutzen. Indem du diese Website benutzt, erklärst du dich damit einverstanden.\n\n\
+        Für das beste Erlebnis, nutzen sie bitte einen der folgenden Browser:\
+        · Microsoft Edge (Desktop oder Mobil)\
+        · Google Chrome (Desktop"
     if (lockedTime == null) {
         localStorage.setItem("lockedTime", 0);
         location.href = location.href;
@@ -57,7 +65,7 @@ function login(){
     if (username == null){
         //Alert the user he can log in on the user menu and set username to "anmelden"
         document.getElementsByClassName("username")[0].innerHTML="anmelden";
-        /*Diese lange Nachricht begrüßt den Nutzer*/ alert("Willkommen! Wir haben bemerkt, dass du diese Seite zum ersten Mal besuchst.\nDu kannst dich über das Benutzermenü registrieren. Dieses öffnest du, indem du rechts über dein Benutzerbild fährst. (An Touchscreen nutzer: Du kannst auch tippen.)\nDu siehst diese Nachricht nur einmal.\n\nPS: Diese Seite benutzt den LocalStorage. Er ist quasi ein Cookie, also eine Datei, die auf deinem gerät gespeichert wird, aber ist einfacher für mich zu nutzen. Indem du diese Website benutzt, erklärst du dich damit einverstanden.");
+        /*Diese lange Nachricht begrüßt den Nutzer*/ alert(message);
         localStorage.setItem("username", "NOT_LOGGED_IN__EC");
         username = "NOT_LOGGED_IN__EC"
     } else if (username == "NOT_LOGGED_IN__EC") {
