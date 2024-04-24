@@ -35,15 +35,7 @@ function login(){
     var timeout = localStorage.getItem("timeout");
     var triesLeft = localStorage.getItem("triesLeft");
     var lockedTime = localStorage.getItem("lockedTime");
-    var message = "Willkommen! Wir haben bemerkt, dass du diese Seite zum ersten Mal besuchst.\n\
-        Du kannst dich über das Benutzermenü registrieren. Dieses öffnest du, indem du rechts über dein Benutzerbild fährst.\
-        (An Touchscreen nutzer: Du kannst auch tippen.)\n\
-        Du siehst diese Nachricht nur einmal.\n\n\
-        PS: Diese Seite benutzt den LocalStorage. Er ist quasi ein Cookie, also eine Datei, die auf deinem gerät gespeichert wird,\
-        aber ist einfacher für mich zu nutzen. Indem du diese Website benutzt, erklärst du dich damit einverstanden.\n\n\
-        Für das beste Erlebnis, nutzen sie bitte einen der folgenden Browser:\
-        · Microsoft Edge (Desktop oder Mobil)\
-        · Google Chrome (Desktop"
+    var message = "Willkommen! Wir haben bemerkt, dass du diese Seite zum ersten Mal besuchst.\nDu kannst dich über das Benutzermenü registrieren. Dieses öffnest du, indem du rechts über dein Benutzerbild fährst.(An Touchscreen nutzer: Du kannst auch tippen.)\nDu siehst diese Nachricht nur einmal.\n\nPS: Diese Seite benutzt den LocalStorage. Er ist quasi ein Cookie, also eine Datei, die auf deinem Gerät gespeichert wird, aber ist einfacher für mich zu nutzen. Indem du diese Website benutzt, erklärst du dich damit einverstanden."
     if (lockedTime == null) {
         localStorage.setItem("lockedTime", 0);
         location.href = location.href;
