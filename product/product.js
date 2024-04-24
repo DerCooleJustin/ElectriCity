@@ -1,7 +1,7 @@
 function checkForParams(){
     const parameter = new URLSearchParams(location.search);
-    const product = parameter.get("p");
-    if (produkt == null) {
+    product = parameter.get("p");
+    if (product == null) {
         const content = document.getElementsByClassName("content");
         content.item(0).innerHTML = "<h1>404 Not found</h1><hr>Das Produkt wurde nicht gefunden! Ist der Link richtig?<br><br><a href='javascript:window.history.back()'>Zurück</a>";
         return 1;
@@ -9,7 +9,7 @@ function checkForParams(){
 }
 
 function loadJSON(){
-    fetch(`/ElectriCity/products/data/${product}.json`).then((response) => response.json()).then((json) => document.write(json));
+    fetch(`/ElectriCity/product/data/${product}.json`).then((response) => response.json()).then((json) => document.write(json));
 
 }
 
