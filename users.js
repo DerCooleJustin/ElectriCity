@@ -29,7 +29,7 @@ function logout(){
 
 function login(){
     console.log("login called!")
-    clearInterval(interval1);
+    clearInterval(intervalID);
     var username = localStorage.getItem("username");
     var password = localStorage.getItem("password");
     var timeout = localStorage.getItem("timeout");

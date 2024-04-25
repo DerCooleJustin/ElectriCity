@@ -23,8 +23,9 @@ function check404(data){
 }
 
 function main(){
+    clearInterval(productInterval);
     if (checkForParams() == false) return false;
     if(check404(loadJSON())) alert ("ERROR!");
 }
 
-main();
+productInterval = setInterval(main, 10);
