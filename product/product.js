@@ -23,7 +23,32 @@ function check404(data){
 function main(){
     clearInterval(productInterval);
     if (checkForParams() == false) return false;
+
     if(check404(loadJSON())) alert ("ERROR!");
+
 }
 
 productInterval = setInterval(main, 10);
+
+
+function loadJSON() {
+    return fetch('/ElectriCity/product/data/test.json')
+        .then(response => {
+            if (response.ok) {
+                return response;
+            } else {
+                throw new Error('Network response was not ok.');
+            }
+        })
+        .catch(error => {
+            // Handle any errors here
+            console.error('There has been a problem with your fetch operation:', error);
+            throw error; // Re-throw the error to propagate it
+        });
+}
+
+// Usage:
+let status;
+loadJSON().then(parsedData => {
+    status = parsedData.status;
+})
