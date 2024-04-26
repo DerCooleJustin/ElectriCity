@@ -93,8 +93,17 @@ body {
     .image{
         border-style: solid;
         border-radius: 20px;
-        width: 40%;
-        height: 40%;
+        height: min-content;
+        margin: auto;
+        padding: 20px;
+    }
+    .produkttext{
+        margin: auto;
+        border-style: solid;
+        border-radius: 20px;
+        padding: 20px;
+        height: min-content;
+        width: min-content;
     }
 }
 
