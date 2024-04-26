@@ -9,9 +9,7 @@ function checkForParams(){
 }
 
 function loadJSON(){
-    let Data;
-    fetch(`/ElectriCity/product/data/${product}.json`).then((response) => Data = response);
-    return Data;
+    return fetch(`/ElectriCity/product/data/${product}.json`);
 }
 
 function check404(data){

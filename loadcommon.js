@@ -48,8 +48,10 @@ interval1 = setInterval(function(){
   }, 100);
 });
 
-if(location.pathname.includes("product")){
-  const script = document.createElement("script");
-  script.src = productlink;
-  document.head.appendChild(script);
-}
+setTimeout(function(){
+  if(location.pathname.includes("product")){
+    const script = document.createElement("script");
+    script.src = productlink;
+    document.head.appendChild(script);
+  }
+}, 100);
