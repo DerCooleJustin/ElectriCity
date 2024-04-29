@@ -1,54 +1,47 @@
-function checkForParams(){
+const backLink = "<br><br><a href='javascript:window.history.back()'>Zurück</a>";
+
+function checkForParams() {
     const parameter = new URLSearchParams(location.search);
-    product = parameter.get("p");
+    const product = parameter.get("p");
     if (product == null) {
-        const content = document.getElementsByClassName("content");
-        content.item(0).innerHTML = "<h1>404 Not found</h1><hr>Das Produkt wurde nicht gefunden! Ist der Link richtig?<br><br><a href='javascript:window.history.back()'>Zurück</a>";
         return false;
-    } else return true;
+    } else return product;
 }
 
-function loadJSON(){
-    return fetch(`/ElectriCity/product/data/${product}.json`);
+async function getProducts(url) {
+    const response = await fetch(url);
+    return response.json();
 }
 
-function check404(data){
-    if (data.status == 404) {
-        const content = document.getElementsByClassName("content");
-        content.item(0).innerHTML = "<h1>404 Not found</h1><hr>Das Produkt wurde nicht gefunden! Ist der Link richtig?<br><br><a href='javascript:window.history.back()'>Zurück</a>";
-        return true;
-    } else return false;
+getProducts("/ElectriCity/product/data/test.json")
+    .then((data) => {
+        console.log(data); // Process the JSON data here
+    })
+    .catch((error) => {
+        document.getElementsByClassName("content").item(0).innerHTML = "<h1>500 Internal Server Error</h1>"
+        console.error("Beim Laden der JSON Datei ist ein Fehler aufgetreten:\n", error);
+    });
+
+
+
+function main() {
+    const product = checkForParams();
+    if (product == false) {
+        document.getElementsByClassName("content").item(0).innerHTML = "<h1>400 Bad Request</h1><hr><p>Es wurde kein Produkt gefunden. Überprüfe die Browserkonsole für mehr Infos.</p>" + backLink;
+        console.error(`Die URL-Parameter ("${location.search}") enthalten kein Produkt!`);
+        return;
+    }
+
 }
 
-function main(){
-    clearInterval(productInterval);
-    if (checkForParams() == false) return false;
 
-    if(check404(loadJSON())) alert ("ERROR!");
-
-}
-
-productInterval = setInterval(main, 10);
-
-
-function loadJSON() {
-    return fetch('/ElectriCity/product/data/test.json')
-        .then(response => {
-            if (response.ok) {
-                return response;
-            } else {
-                throw new Error('Network response was not ok.');
-            }
-        })
-        .catch(error => {
-            // Handle any errors here
-            console.error('There has been a problem with your fetch operation:', error);
-            throw error; // Re-throw the error to propagate it
-        });
-}
-
-// Usage:
-let status;
+/* Usage:
 loadJSON().then(parsedData => {
-    status = parsedData.status;
-})
+    //Do something with parsedData;
+});
+*/
+
+/*
+        const content = document.getElementsByClassName("content");
+        content.item(0).innerHTML = "errorMsg";
+*/
