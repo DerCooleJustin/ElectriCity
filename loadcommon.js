@@ -3,7 +3,6 @@ footerlink = "https://dercoolejustin.github.io/ElectriCity/footer.html";
 stylelink = "https://dercoolejustin.github.io/ElectriCity/style.css";
 faviconlink = "https://dercoolejustin.github.io/ElectriCity/images/favicon.ico";
 usersLink = "https://dercoolejustin.github.io/ElectriCity/users.js";
-productlink = "https://dercoolejustin.github.io/ElectriCity/product/product.js";
 
 
 const userScript = document.createElement("script");
@@ -47,11 +46,3 @@ interval1 = setInterval(function(){
     interval2 = setInterval(login(), 10);
   }, 100);
 });
-
-setTimeout(function(){
-  if(location.pathname.includes("product")){
-    const script = document.createElement("script");
-    script.src = productlink;
-    document.head.appendChild(script);
-  }
-}, 100);
