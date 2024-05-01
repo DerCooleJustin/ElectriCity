@@ -41,7 +41,7 @@ async function main() {
     const specs = document.getElementsByClassName("produkttext").item(1);
     const title = document.getElementById("title");
     image.src = json.img;
-    text.innerHTML = json.text + "<a href='/ElectriCity/impressum'>" + json.price + " | Jetzt kaufen</a>";
+    text.innerHTML = json.text + "<a href='/ElectriCity/impressum'>" + json.price + "€ | Jetzt kaufen</a>";
     specs.innerHTML = json.specs;
     title.innerHTML = json.title;
 }
