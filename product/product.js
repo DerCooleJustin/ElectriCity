@@ -13,7 +13,7 @@ async function getProducts(url) {
     return response.json();
 }
 
-function main() {
+async function main() {
     const product = checkForParams();
     if (product == false) {
         document.getElementsByClassName("content").item(0).innerHTML = "<h1>400 Bad Request</h1><hr><p>Es wurde kein Produkt gefunden. Überprüfe die Browserkonsole für mehr Infos.</p>" + backLink;
