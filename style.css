@@ -121,9 +121,18 @@ body {
         margin: auto;
         padding: 20px;
     }
-    .produkttext{
+
+    .produkttext {
         max-width: 45%;
         margin-top: 0;
+
+        a {
+            color: white;
+            background-color: red;
+            padding: 10px;
+            border-radius: 30px;
+            margin: 10px;
+        }
     }
 
 }
