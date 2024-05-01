@@ -37,13 +37,13 @@ async function main() {
         });
     const productInfo = document.getElementsByClassName("produktinfo").item(0);
     const image = productInfo.getElementsByClassName("image").item(0).getElementsByTagName("img").item(0);
-    const text = productInfo.getElementsByClassName("produkttext").item(0).getElementsByTagName("p").item(0);
+    const text = productInfo.getElementsByClassName("produkttext").item(0);
     const specs = document.getElementsByClassName("produkttext").item(1);
     const title = document.getElementById("title");
     image.src = json.img;
     text.innerText = json.text;
-    specs.innerText = json.specs;
-    title.innerText = json.title;
+    specs.innerHTML = json.specs;
+    title.innerHTML = json.title;
 }
 
 main();
