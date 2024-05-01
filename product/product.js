@@ -45,3 +45,5 @@ async function main() {
     specs.innerText = json.specs;
     title.innerText = json.title;
 }
+
+main();
