@@ -1,5 +1,3 @@
-const backLink = "<br><br><a href='javascript:window.history.back()'>Zurück</a>";
-
 function checkForParams() {
     const parameter = new URLSearchParams(location.search);
     const product = parameter.get("p");
@@ -14,6 +12,7 @@ async function getProducts(url) {
 }
 
 async function main() {
+    const backLink = "<br><br><a href='javascript:window.history.back()'>Zurück</a>";
     const product = checkForParams();
     if (product == false) {
         document.getElementsByClassName("content").item(0).innerHTML = "<h1>400 Bad Request</h1><hr><p>Es wurde kein Produkt gefunden. Überprüfe die Browserkonsole für mehr Infos.</p>" + backLink;
@@ -44,6 +43,7 @@ async function main() {
     text.innerHTML = json.text + "<br><a href='/ElectriCity/impressum'>" + json.price + "€ | Jetzt kaufen</a>";
     specs.innerHTML = json.specs;
     title.innerHTML = json.title;
+    document.title = json.title;
 }
 
 main();
